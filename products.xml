@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Eligma-products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <products>
+        <product
+                id="732007"
+                name="Dežela savn - dnevna odrasli"
+                brand="Vodno mesto Atlantis2"
+                price="33.00"
+                currency="EUR"
+                stock_online="s-1"
+                stock_offline="-1"
+                url="http://www.atlantis-vodnomesto.si/"
+                description="Dežela savn je eden od treh tematskih sklopov Vodnega mesta Atlantis. S karto za Deželo savn imate tudi trikraten vstop v ostala dva sklopa: Svet doživetij in Termalni tempelj.">
+            <categories>
+                <category>Catalog</category>
+                <category>Sub category 1</category>
+                <category>Sub category 2</category>
+            </categories>
+            <description><![CDATA[<p>"Dežela savn je eden od treh tematskih sklopov Vodnega mesta Atlantis. S karto za Deželo savn imate tudi trikraten vstop v ostala dva sklopa: Svet doživetij in Termalni tempelj.
+Dežela savn razvaja slehernega obiskovalca, saj ponuja 14 tematskih savn v notranjem in zunanjem delu.
+Notranje savne so razporejene v kar dveh nadstropjih (velika finska savna in mala finska savna, parna savna, eucalyptus savna, laconium, blatna, čokoladna savna.)
+Zunanje savne v podobi hišic (Planšarska, Panoramska, Zemeljska in Rudniška savna) so iz posebnega polarnega lesa, t.i. lesa kelo, ki dosega starost več sto let in omogoča razmere za optimalno finsko savnanje.
+V Deželi savn skozi ves dan potekajo različne brezplačne terapije (aromaterapije, vrtinčenje zraka, peeling) in wellness programi kot sta savna joga (ob torkih) in gong terapija (ob četrtkih). Poleg savnanja lahko uživate še na terasah za počitek, v panoramski sobi, v zunanjem bazenu s pečino in toplim gejzirom, v notranjih bazenih.
+Darilni bon velja vse dni v tednu. Izbirate lahko med: 2-, 4-urno in celodnevno vstopnico, cena je odvisna od tipa in trajanja storitve.</p>]]></description>
+            <images>
+                <image url="https://trgovina.atlantis-vodnomesto.si/media/catalog/product/cache/1/image/800x600/9df78eab33525d08d6e5fb8d27136e95/0/0/003-dezela-savn2_1.jpg"/>
+            </images>
+            <properties>
+                <property name="property 1" value="1" type="int"/>
+                <property name="property 2" value="2" type="int"/>
+            </properties>
+            <packaging>
+                <property name="width" value="33" type="sm"/>
+                <property name="height" value="42" type="sm"/>
+            </packaging>
+        </product>
+    </products>
+</Eligma-products>
