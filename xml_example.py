@@ -25,3 +25,8 @@ class TextXMLImporter(importer.XMLImporter):
 with open('products.xml') as f:
     p = TextXMLImporter()
     p.parse(f)
+
+
+with open('products-tags.xml') as f:
+    p = TextXMLImporter()
+    p.parse(f)

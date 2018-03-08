@@ -76,7 +76,12 @@ class XMLImporter(Base, xml.sax.ContentHandler):
     in_product = False
     in_properties = False
     in_packaging = False
-    in_description = False
+
+    tags = {
+        'id', 'ean', 'upc', 'name', 'brand', 'model', 'price', 'old_price',
+        'sale_price', 'stock_online', 'stock_offline', 'warranty', 'url',
+        'small_description', 'description',
+    }
 
     SCHEMA = {
         'stock_online': int,
@@ -91,13 +96,12 @@ class XMLImporter(Base, xml.sax.ContentHandler):
     }
 
     def startElement(self, name, attrs):  # noqa
+        name = name.lower()
+
         if name == 'product':
             self.in_product = True
             self.product = dict(images=list(), properties=list(), categories=list(), packaging=list())
             self.product.update(attrs)
-
-        if name == 'description' and self.in_product:
-            self.in_description = True
 
         if name == 'image' and self.in_product:
             if attrs.get('url'):
@@ -117,6 +121,8 @@ class XMLImporter(Base, xml.sax.ContentHandler):
             self.in_properties = True
 
     def endElement(self, name):
+        name = name.lower()
+
         if name == 'product':
             self.in_product = False
             self.save_product()
@@ -131,9 +137,8 @@ class XMLImporter(Base, xml.sax.ContentHandler):
         if name == 'properties':
             self.in_properties = False
 
-        if name == 'description':
-            self.product['description'] = self.content.strip()
-            self.in_description = False
+        if name in self.tags:
+            self.product[name] = self.content.strip()
 
         self.content = ''
 
@@ -144,7 +149,7 @@ class XMLImporter(Base, xml.sax.ContentHandler):
         return self.convert_values(self.SCHEMA, self.product)
 
     def save_product(self):
-        print (self.get_product())
+        raise NotImplementedError
 
     def parse(self, file):
         try:

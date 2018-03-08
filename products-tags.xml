@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Eligma-products>
+    <products>
+        <product>
+            <id>The internal ID</id>
+            <ean>00000001</ean>
+            <upc>000000002</upc>
+            <name>The product name</name>
+            <brand>Brand name</brand>
+            <model>Black color</model>
+            <price>100.00</price>
+            <old_price>0.00</old_price>
+            <sale_price>0.00</sale_price>
+            <stock_online>4</stock_online>
+            <stock_offline>10</stock_offline>
+            <warranty>12</warranty>
+            <url>http://example.com/</url>
+            <small_description>Small description in plain text without html tags</small_description>
+            <description><![CDATA[<html>This is a long description with HTML tags</html>]]></description>
+            <categories>
+                <category>Catalog</category>
+                <category>Sub category 1</category>
+                <category>Sub category 2</category>
+            </categories>
+            <images>
+                <image url="http://example.com/image.png" width="100" height="100" />
+                <image url="http://example.com/image.png" width="100" height="100" />
+                <image url="http://example.com/image.png" width="100" height="100" />
+            </images>
+            <properties>
+                <property name="CPU cores" value="3" type="int" />
+                <property name="Display" value="5.2" unit="inch" type="float" />
+                <property name="RAM memory" value="1.5" unit="Gb" type="string" />
+            </properties>
+	        <packaging>
+                <property name="width" value="30" unit="sm" />
+                <property name="height" value="42" unit="sm" />
+                <property name="weight" value="1.5" unit="kg" />
+            </packaging>
+        </product>
+    </products>
+</Eligma-products>
